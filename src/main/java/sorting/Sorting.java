@@ -10,7 +10,7 @@ import java.io.FileReader;
 import java.io.IOException;
 import java.util.*;
 
-public class TransportReadJsonSimple {
+public class Sorting {
 
     private static File transportFile;
     private JSONArray plane = new JSONArray();
@@ -152,23 +152,23 @@ public class TransportReadJsonSimple {
             }
         }
 
-        System.out.println("planes :" +plane);
-        System.out.println("cars : " +car);
-        System.out.println("trains :" +train);
+//        System.out.println("planes :" +plane);
+//        System.out.println("cars : " +car);
+//        System.out.println("trains :" +train);
     }
 
     public void setFiles(String product) {
-        TransportReadJsonSimple.transportFile = new File(product);
+        Sorting.transportFile = new File(product);
     }
 
     public static void main(String[] args) {
 
-        TransportReadJsonSimple transportReadJsonSimple = new TransportReadJsonSimple();
-        transportReadJsonSimple.setFiles("transport.json");
+        Sorting sorting = new Sorting();
+        sorting.setFiles("transport.json");
 
         try {
-            transportReadJsonSimple.readFile();
-            transportReadJsonSimple.writeResult();
+            sorting.readFile();
+            sorting.writeResult();
 
         }
         catch (Exception e) {
