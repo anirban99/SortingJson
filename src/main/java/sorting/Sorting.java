@@ -29,7 +29,6 @@ public class Sorting {
         }
 
         System.out.println("Total Plane Capacity : " +totalPlaneCapacity);
-
         return totalPlaneCapacity;
     }
 
@@ -40,12 +39,10 @@ public class Sorting {
         for(int i =0; i < carArray.size(); i++){
             JSONObject childJSONObject = (JSONObject) carArray.get(i);
             String passengerCapacity = childJSONObject.get("passenger-capacity").toString();
-//            System.out.println(passengerCapacity);
             totalCarCapacity = totalCarCapacity + Integer.parseInt(passengerCapacity);
         }
 
         System.out.println("Total Car Capacity : " +totalCarCapacity);
-
         return totalCarCapacity;
     }
 
@@ -57,19 +54,16 @@ public class Sorting {
             JSONObject childJSONObject = (JSONObject) trainArray.get(i);
             String numberOfWagons = childJSONObject.get("number-wagons").toString();
             String wagonPassengerCapacity = childJSONObject.get("w-passenger-capacity").toString();
-
             totalTrainCapacity = totalTrainCapacity + (Integer.parseInt(numberOfWagons) * Integer.parseInt(wagonPassengerCapacity));
         }
 
         System.out.println("Total Train Capacity : " +totalTrainCapacity);
-
         return totalTrainCapacity;
     }
 
 
     public int sortPlaneDistinctType(JSONArray planeArray) {
 
-//        List<JSONObject> jsonValues = new ArrayList<>();
         Set<String> planeSet = new HashSet<>();
 
         for (int i = 0; i < planeArray.size(); i++) {
@@ -79,7 +73,6 @@ public class Sorting {
         }
 
         System.out.println("Distinct Planes : " +planeSet.size());
-
         return planeSet.size();
     }
 
@@ -94,7 +87,6 @@ public class Sorting {
         }
 
         System.out.println("Distinct Cars : " +carSet.size());
-
         return carSet.size();
     }
 
@@ -109,7 +101,6 @@ public class Sorting {
         }
 
         System.out.println("Distinct Trains : " +trainSet.size());
-
         return trainSet.size();
     }
 
@@ -151,28 +142,9 @@ public class Sorting {
                 train.add(transportList.get(i));
             }
         }
-
-//        System.out.println("planes :" +plane);
-//        System.out.println("cars : " +car);
-//        System.out.println("trains :" +train);
     }
 
     public void setFiles(String product) {
         Sorting.transportFile = new File(product);
-    }
-
-    public static void main(String[] args) {
-
-        Sorting sorting = new Sorting();
-        sorting.setFiles("transport.json");
-
-        try {
-            sorting.readFile();
-            sorting.writeResult();
-
-        }
-        catch (Exception e) {
-            System.out.println("Error encountered");
-        }
     }
 }
