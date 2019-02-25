@@ -11,6 +11,8 @@ Using command line -
     mvn clean package
 
     mvn exec:java -Dexec.mainClass=sorting.Main
+    
+    mvn test -Dtest=sorting.SortingTest
 
 
 **Project description**
