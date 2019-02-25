@@ -6,7 +6,6 @@ public class Main {
 
         Sorting sorting = new Sorting();
         sorting.setFiles("transport.json");
-//        sorting.setFiles("src/main/resources.transport.json");
 
         try {
             sorting.readFile();

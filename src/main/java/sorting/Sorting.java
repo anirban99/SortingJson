@@ -28,7 +28,7 @@ public class Sorting {
             totalPlaneCapacity = totalPlaneCapacity + Integer.parseInt(ePassengerCapacity) + Integer.parseInt(bPassengerCapacity);
         }
 
-        System.out.println("Total Plane Capacity : " +totalPlaneCapacity);
+//        System.out.println("Total Plane Capacity : " +totalPlaneCapacity);
         return totalPlaneCapacity;
     }
 
@@ -42,7 +42,7 @@ public class Sorting {
             totalCarCapacity = totalCarCapacity + Integer.parseInt(passengerCapacity);
         }
 
-        System.out.println("Total Car Capacity : " +totalCarCapacity);
+//        System.out.println("Total Car Capacity : " +totalCarCapacity);
         return totalCarCapacity;
     }
 
@@ -57,7 +57,7 @@ public class Sorting {
             totalTrainCapacity = totalTrainCapacity + (Integer.parseInt(numberOfWagons) * Integer.parseInt(wagonPassengerCapacity));
         }
 
-        System.out.println("Total Train Capacity : " +totalTrainCapacity);
+//        System.out.println("Total Train Capacity : " +totalTrainCapacity);
         return totalTrainCapacity;
     }
 
@@ -72,7 +72,7 @@ public class Sorting {
             planeSet.add(model);
         }
 
-        System.out.println("Distinct Planes : " +planeSet.size());
+//        System.out.println("Distinct Planes : " +planeSet.size());
         return planeSet.size();
     }
 
@@ -86,7 +86,7 @@ public class Sorting {
             carSet.add(manufacturer);
         }
 
-        System.out.println("Distinct Cars : " +carSet.size());
+//        System.out.println("Distinct Cars : " +carSet.size());
         return carSet.size();
     }
 
@@ -100,7 +100,7 @@ public class Sorting {
             trainSet.add(model);
         }
 
-        System.out.println("Distinct Trains : " +trainSet.size());
+//        System.out.println("Distinct Trains : " +trainSet.size());
         return trainSet.size();
     }
 
@@ -143,7 +143,7 @@ public class Sorting {
             }
         }
 
-        System.out.print(plane);
+//        System.out.print(plane);
 //        System.out.print(car);
 //        System.out.print(train);
 
