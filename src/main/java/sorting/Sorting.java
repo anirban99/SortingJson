@@ -142,6 +142,11 @@ public class Sorting {
                 train.add(transportList.get(i));
             }
         }
+
+        System.out.print(plane);
+//        System.out.print(car);
+//        System.out.print(train);
+
     }
 
     public void setFiles(String product) {
