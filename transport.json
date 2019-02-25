@@ -8,6 +8,7 @@
     {"manufacturer":"Audi","model":"Q3","passenger-capacity":6},
     {"model":"Boeing 777","b-passenger-capacity":10,"e-passenger-capacity":400},
     {"manufacturer":"Mercedes-Benz","model":"E-Klasse","passenger-capacity":4},
-    {"model":"ICE","number-wagons":5,"w-passenger-capacity":40}
+    {"model":"ICE","number-wagons":6,"w-passenger-capacity":50},
+    {"model":"TGV","number-wagons":8,"w-passenger-capacity":40}
   ]
 }

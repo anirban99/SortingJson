@@ -18,6 +18,30 @@ import static org.junit.Assert.assertTrue;
 public class SortingTest {
 
     @Test
+    public void testSetFiles() {
+        File file = new File("transport.json");
+        assertTrue(file.exists());
+    }
+
+    @Test
+    public void testReadFile() {
+
+        Object object = null;
+        try {
+            object = new JSONParser().parse(new FileReader("transport.json"));
+        } catch (IOException e) {
+            e.printStackTrace();
+        } catch (ParseException e) {
+            e.printStackTrace();
+        }
+
+        JSONObject jsonObject = (JSONObject) object;
+        JSONArray transportList = (JSONArray) jsonObject.get("transports");
+
+        assertEquals(10, transportList.size());
+    }
+
+    @Test
     @SuppressWarnings("Duplicates")
     public void testSortPlaneCapacity() {
 
@@ -184,35 +208,5 @@ public class SortingTest {
         assertTrue(formDetailsJson.containsKey("planes"));
         assertTrue(formDetailsJson.containsKey("cars"));
         assertTrue(formDetailsJson.containsKey("trains"));
-    }
-
-    @Test
-    public void testReadFile() {
-
-        Object object = null;
-        try {
-            object = new JSONParser().parse(new FileReader("transport.json"));
-        } catch (IOException e) {
-            e.printStackTrace();
-        } catch (ParseException e) {
-            e.printStackTrace();
-        }
-
-        JSONObject jsonObject = (JSONObject) object;
-        JSONArray transportList = (JSONArray) jsonObject.get("transports");
-
-        assertEquals(9, transportList.size());
-    }
-
-    @Test
-    public void testSetFiles() {
-        File file = new File("transport.json");
-        assertTrue(file.exists());
-    }
-
-    @Test
-    public void testSetFilesPath() {
-        File file = new File("/Users/anirbanchatterjee/Other/SortingJson/transport.json");
-        assertTrue(file.exists());
     }
 }
