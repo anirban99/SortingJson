@@ -203,7 +203,7 @@ public class SortingTest {
         JSONObject formDetailsJson = new JSONObject();
         formDetailsJson.put("planes", 934);
         formDetailsJson.put("cars", 18);
-        formDetailsJson.put("trains", 350);
+        formDetailsJson.put("trains", 770);
 
         assertTrue(formDetailsJson.containsKey("planes"));
         assertTrue(formDetailsJson.containsKey("cars"));

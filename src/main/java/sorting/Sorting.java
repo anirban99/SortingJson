@@ -133,14 +133,18 @@ public class Sorting {
 
     /** To write the json with the sorted data **/
     public void writeResult() {
-        JSONObject formDetailsJson = new JSONObject();
-        formDetailsJson.put("planes", sortPlaneCapacity(plane));
-        formDetailsJson.put("cars", sortCarCapacity(car));
-        formDetailsJson.put("trains", sortTrainCapacity(train));
-        formDetailsJson.put("distinct-planes", sortPlaneDistinctType(plane));
-        formDetailsJson.put("distinct-cars", sortCarDistinctType(car));
-        formDetailsJson.put("distinct-trains", sortTrainDistinctType(train));
 
-        System.out.println("Result : " +formDetailsJson);
+        LinkedHashMap<String, Integer> jsonOrderedMap = new LinkedHashMap();
+
+        jsonOrderedMap.put("planes", sortPlaneCapacity(plane));
+        jsonOrderedMap.put("trains", sortTrainCapacity(train));
+        jsonOrderedMap.put("cars", sortCarCapacity(car));
+        jsonOrderedMap.put("distinct-cars", sortCarDistinctType(car));
+        jsonOrderedMap.put("distinct-planes", sortPlaneDistinctType(plane));
+        jsonOrderedMap.put("distinct-trains", sortTrainDistinctType(train));
+
+        JSONArray sortedArray = new JSONArray();
+        sortedArray.add(jsonOrderedMap);
+        System.out.println("Result : " +sortedArray);
     }
 }
